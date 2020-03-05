@@ -13,7 +13,7 @@ LSRAT is an R package that performs retrospective variant-set testing for longit
   
 3. PLINK 1.0 or 1.9 (https://www.cog-genomics.org/plink2)
 
-Install the required R packages before you install LSRAT package. Install the **LSRAT** using the following steps.
+Install the required R packages before you install LSRAT package. Instructions for installing "LBRAT" can be found here (https://github.com/ZWang-Lab/LBRAT). Install the **LSRAT** using the following steps.
 
 
 ### Install LSRAT on LUNIX or Mac OSX
