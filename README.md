@@ -1,13 +1,13 @@
 # LSRAT: Longitudinal variant-Set Retrospective Association Test
 
-LSRAT is an R program that performs retrospective variant-set testing for longitudinal traits in GWA studies.
+LSRAT is an R package that performs retrospective variant-set testing for longitudinal traits in GWA studies.
 
 
 ## Installation Instructions:
 
 ### Required software and packages
 
-1. R(http://www.r-project.org/)
+1. R (http://www.r-project.org/)
   
 2. R Packages: snpStats, LBRAT, GENESIS, plyr, geepack, lme4, nlme, mvtnorm
   
