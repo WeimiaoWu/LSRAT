@@ -1,9 +1,7 @@
 Get.p.eigen<-function(Q, A1){
-  #here
+
   lambda <- Get_Lambda(A1);
   param<-Get_Liu_Params_Mod_Lambda(lambda); 
-  # print(sum(param$muQ))
-  # print(param$muQ)
   Q.Norm<-(Q - param$muQ)/param$sigmaQ;Q.Norm<-Q.Norm * param$sigmaX + param$muX;
   p.value<- pchisq(Q.Norm,  df = param$l,ncp=param$d, lower.tail=FALSE)
   return(p.value);

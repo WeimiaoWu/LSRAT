@@ -17,16 +17,6 @@
 #' 
 lsrat_test <- function(srat.est,G, weights='beta',impute.method='mean', GRM = NULL,tests = c("B", "S", "O", "E", "V", "R"), B = 5000,rho = c(0,0.5,1), return_single = FALSE){
 
-# srat.est = m1;
-# G=p0_gen$snp.mat;
-#  weights='beta';
-#  impute.method='mean';
-#  GRM = NULL;
-#  LD = NULL;
-#   tests = c("B", "S", "O", "E", "V", "R")
-#  B = 5000;
-#  rho = c(0, 0.5,1)
-
 #Check input object
   if (!class(srat.est) %in% c("LSRAT_gee" ,"RSMMAT_glmm")){
     stop("Error: only take output from lsrat_est() or rsmmat_est() as input!")
