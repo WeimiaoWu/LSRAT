@@ -11,9 +11,9 @@ rsmmat_est(y.long, time, y.cov, timecov = TRUE)
 
 \item{time}{Time covarites matched with phenotype vector}
 
-\item{y.cov}{Covariate matrix denoting the covariate variables measured at each time}
+\item{y.cov}{Long-formatted covariant matrix denoting the covariant to be included in the null model measured at each time}
 
-\item{timecov}{Logical variable, indicating whether the time fixed effect is estimated}
+\item{timecov}{Logical variable, indicating whether the time fixed effect should be included in the model and to be estimated}
 }
 \value{
 This function returns a list object with model parameters and residuals of the NULL GLMM model

@@ -1,12 +1,12 @@
 #' GEE NULL model estimation
 #'
-#' This function estimate the parameters and residuals for the NULL model for GEE/LSRAT tests
+#' This function estimates the parameters and residuals for the NULL model for performing the GEE/LSRAT tests. It outputs an R object that can be used as input for lsrat_test(). 
 #'
-#' @param y.long Long-formatted phenotype vector 
-#' @param time Time covarites matched with phenotype vector
-#' @param y.cov Covariate matrix denoting the covariate variables measured at each time
-#' @param timecov Logical variable, indicating whether the time fixed effect is estimated 
-#' @param corstr String, correlation structure for GEE model, optional values are: 'ar1', 'ind', 'mixture' 
+#' @param y.long Long-formatted phenotype vector
+#' @param time Time covarites, it should be matched with the phenotype vector
+#' @param y.cov Long formated covariate matrix denoting the covariant variables measured at each time, can includes both static and dynamic covariants. 
+#' @param timecov Logical variable, indicating whether the time fixed effect should be included and to be estimated 
+#' @param corstr String, variance correlation structure for GEE model to account for within person correlation, optional values are: 'ar1', 'ind', 'mixture'. 
 #' @return This function returns a list object with model parameters and residuals of the NULL GEE model 
 #' @export
 #' 
@@ -86,8 +86,8 @@ lsrat_est <- function(y.long, time, y.cov, timecov = TRUE, corstr = "ar1"){
 #'
 #' @param y.long Long-formatted phenotype vector 
 #' @param time Time covarites matched with phenotype vector
-#' @param y.cov Covariate matrix denoting the covariate variables measured at each time
-#' @param timecov Logical variable, indicating whether the time fixed effect is estimated
+#' @param y.cov Long-formatted covariant matrix denoting the covariant to be included in the null model measured at each time
+#' @param timecov Logical variable, indicating whether the time fixed effect should be included in the model and to be estimated
 #' 
 #' @return This function returns a list object with model parameters and residuals of the NULL GLMM model 
 #' @export

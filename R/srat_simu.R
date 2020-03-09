@@ -4,7 +4,7 @@
 #'
 #' @param n.sample Numeric, sample size, number of individuals
 #' @param n.time Numeric, number of measurements for each individual
-#' @param par List, the parameters for the phenotype traits, including covaraites and individual specific time dependent random effects
+#' @param par List, the parameters for the phenotype traits, including covariants and individual specific time dependent random effects
 #' @param time_cov Logical variable, indicating whether time effect is included in phenotypic traits
 #' @param snp.count Numeric, number of SNPs in each variant set
 #' @param intercept Logical variable, indicating whether intercept is used in phenotypic traits
@@ -66,7 +66,7 @@ lsrat_simu.conti<-function(n.sample=5000, n.time=7, par=list(),
 #'
 #' @param n.sample Numeric, sample size, number of individuals
 #' @param n.time Numeric, number of measurements for each individual
-#' @param par List, the parameters for the phenotype traits, including covaraites and individual specific time dependent random effects
+#' @param par List, the parameters for the phenotype traits, including covariants and individual specific time dependent random effects
 #' @param time_cov Logical variable, indicating whether time effect is included in phenotypic traits
 #' @param snp.count Numeric, number of SNPs in each variant set
 #' @param intercept Logical variable, indicating whether intercept is used in phenotypic traits

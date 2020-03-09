@@ -19,13 +19,13 @@ lsrat_test(
 \arguments{
 \item{srat.est}{The output of function "lsrat_est()" or "rsmmat_est()"}
 
-\item{G}{The genotype matrix, an m*q matrix where m is the number of subjects and q is the total number genetic variants.}
+\item{G}{The genotype matrix of SNP-set, an m*q matrix where m is the number of subjects and q is the total number genetic variants.}
 
-\item{impute.method}{choose the iputation method when there is missing genotype. Optional options are: 'random', 'fixed' or 'bestguess'.}
+\item{impute.method}{choose the imputation method when there is missing genotype. Optional options are: 'random', 'fixed' or 'bestguess'.}
 
 \item{GRM}{takes m-by-m genetic correlation matrix or kinship matrix.}
 
-\item{tests}{a character vector indicating which LSRAT/RSMMAT tests should be performed ("B" for the burden test, "S" for SKAT, "C" for variant-level ACAT test, "O" for SKAT-O, "E" for the SMMAT test, "A" for omnibus ACAT test).}
+\item{tests}{a character vector indicating which LSRAT/RSMMAT tests should be performed ("B" for the burden test, "S" for SKAT, "V" for variant-level ACAT test, "O" for SKAT-O, "E" for the SMMAT test, "R" for omnibus ACAT test).}
 
 \item{B}{a number of perturbation used for P-value approximation}
 
@@ -34,7 +34,7 @@ lsrat_test(
 \item{return_single}{Logical parameter indicating whether single variant P-value to be returned or not. Default = FALSE.}
 }
 \value{
-This function returns a dataframe. The row name is the SNP ID, the first column is the prospective score statistics, the second colum is the retrospective score statistics, the third column is the prospective pvalue and the forth column is the restrospective pvalue
+This function returns a list of the specified tests, the prospective,  retrospective (and pertubed) P-values for the SNP-set of each tests is listed within each test.
 }
 \description{
 This function tests a SNPs for a given SNP set for a given lbrat estimated null model.

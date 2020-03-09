@@ -9,17 +9,17 @@ lsrat_est(y.long, time, y.cov, timecov = TRUE, corstr = "ar1")
 \arguments{
 \item{y.long}{Long-formatted phenotype vector}
 
-\item{time}{Time covarites matched with phenotype vector}
+\item{time}{Time covarites, it should be matched with the phenotype vector}
 
-\item{y.cov}{Covariate matrix denoting the covariate variables measured at each time}
+\item{y.cov}{Long formated covariate matrix denoting the covariant variables measured at each time, can includes both static and dynamic covariants.}
 
-\item{timecov}{Logical variable, indicating whether the time fixed effect is estimated}
+\item{timecov}{Logical variable, indicating whether the time fixed effect should be included and to be estimated}
 
-\item{corstr}{String, correlation structure for GEE model, optional values are: 'ar1', 'ind', 'mixture'}
+\item{corstr}{String, variance correlation structure for GEE model to account for within person correlation, optional values are: 'ar1', 'ind', 'mixture'.}
 }
 \value{
 This function returns a list object with model parameters and residuals of the NULL GEE model
 }
 \description{
-This function estimate the parameters and residuals for the NULL model for GEE/LSRAT tests
+This function estimates the parameters and residuals for the NULL model for performing the GEE/LSRAT tests. It outputs an R object that can be used as input for lsrat_test().
 }

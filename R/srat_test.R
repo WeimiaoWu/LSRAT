@@ -3,15 +3,15 @@
 #' This function tests a SNPs for a given SNP set for a given lbrat estimated null model.
 #'
 #' @param srat.est The output of function "lsrat_est()" or "rsmmat_est()"
-#' @param G The genotype matrix, an m*q matrix where m is the number of subjects and q is the total number genetic variants. 
-#' @param impute.method choose the iputation method when there is missing genotype. Optional options are: 'random', 'fixed' or 'bestguess'.
+#' @param G The genotype matrix of SNP-set, an m*q matrix where m is the number of subjects and q is the total number genetic variants. 
+#' @param impute.method choose the imputation method when there is missing genotype. Optional options are: 'random', 'fixed' or 'bestguess'.
 #' @param GRM takes m-by-m genetic correlation matrix or kinship matrix.
-#' @param tests a character vector indicating which LSRAT/RSMMAT tests should be performed ("B" for the burden test, "S" for SKAT, "C" for variant-level ACAT test, "O" for SKAT-O, "E" for the SMMAT test, "A" for omnibus ACAT test). 
+#' @param tests a character vector indicating which LSRAT/RSMMAT tests should be performed ("B" for the burden test, "S" for SKAT, "V" for variant-level ACAT test, "O" for SKAT-O, "E" for the SMMAT test, "R" for omnibus ACAT test). 
 #' @param B a number of perturbation used for P-value approximation
 #' @param rho a numeric vector defining the search grid used in SMMAT-O for SKAT-O (see the SKAT-O paper for details). Default  = c(0, 0.5, 1)
 #' @param return_single Logical parameter indicating whether single variant P-value to be returned or not. Default = FALSE.
 #' 
-#' @return This function returns a dataframe. The row name is the SNP ID, the first column is the prospective score statistics, the second colum is the retrospective score statistics, the third column is the prospective pvalue and the forth column is the restrospective pvalue
+#' @return This function returns a list of the specified tests, the prospective,  retrospective (and pertubed) P-values for the SNP-set of each tests is listed within each test. 
 #' 
 #' @export
 #' 

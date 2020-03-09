@@ -19,7 +19,7 @@ lsrat_simu.bi(
 
 \item{n.time}{Numeric, number of measurements for each individual}
 
-\item{par}{List, the parameters for the phenotype traits, including covaraites and individual specific time dependent random effects}
+\item{par}{List, the parameters for the phenotype traits, including covariants and individual specific time dependent random effects}
 
 \item{time_cov}{Logical variable, indicating whether time effect is included in phenotypic traits}
 

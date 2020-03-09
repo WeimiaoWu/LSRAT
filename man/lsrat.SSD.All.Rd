@@ -9,12 +9,12 @@ lsrat.SSD.All(SSD.INFO, lsrat_est.obj, ...)
 \arguments{
 \item{SSD.INFO}{SSD format information file, output of function "Open_SSD". The genome wide scan are run set by set.}
 
-\item{lsrat_est.obj}{ouput from lsrat_est() or rsmmat_est()}
+\item{lsrat_est.obj}{The outputs from lsrat_est() or rsmmat_est()}
 
 \item{...}{Other options of the LSRAT or RSMMAT test. Defined as same as in function "lsrat_test()" or "rsmmat_est()"}
 }
 \value{
-reults of the LSRAT test or RSMMAT test. First column contains batchID, second column contains SNP ID, third column concains prospective P-value and forth column contains retrospective P-value
+results of the LSRAT test or RSMMAT test. First column contains batchID, second column contains SNP ID, third column contains prospective P-value and fourth column contains retrospective P-value
 }
 \description{
 LSRAT test or RSMMAT test using SSD format files
